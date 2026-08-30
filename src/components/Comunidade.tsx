@@ -27,10 +27,10 @@ export function Comunidade() {
   ];
 
   return (
-    <section id="comunidade" className="relative py-14 sm:py-20 lg:py-28 bg-[#080808] border-b border-zinc-900 overflow-hidden scroll-mt-20">
+    <section id="comunidade" className="relative py-12 sm:py-16 lg:py-24 bg-[#080808] border-b border-zinc-900 overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header with Official Instagram Action Card */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 sm:mb-12 gap-5">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 sm:mb-10 gap-5">
           <div>
             <span className="text-[#84ff00] font-mono text-xs uppercase tracking-widest block mb-2">
               {"// COMUNIDADE POWER"}
@@ -40,11 +40,11 @@ export function Comunidade() {
               <span className="text-[#84ff00]">UMA ACADEMIA.</span>
             </h2>
             <p className="text-xs sm:text-sm text-zinc-300 font-normal max-w-xl leading-relaxed">
-              Uma comunidade que se apoia e evolui junto todos os dias em São Félix do Xingu.
+              Treino diário, respeito mútuo e compromisso em São Félix do Xingu.
             </p>
           </div>
 
-          {/* Official Instagram Integration Box (100% Clickable Surface, zero fake follower counters) */}
+          {/* Official Instagram Integration Box */}
           <a
             href={siteConfig.business.instagramUrl}
             target="_blank"

@@ -12,7 +12,7 @@ export function Estrutura() {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   return (
-    <section id="estrutura" className="relative py-14 sm:py-20 lg:py-28 bg-[#080808] border-b border-zinc-900 overflow-hidden scroll-mt-20">
+    <section id="estrutura" className="relative py-12 sm:py-16 lg:py-24 bg-[#080808] border-b border-zinc-900 overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
@@ -28,11 +28,11 @@ export function Estrutura() {
           </div>
 
           <p className="text-xs sm:text-sm text-zinc-400 max-w-md font-normal leading-relaxed">
-            Ambiente climatizado, máquinas selecionadas e setorização pensada para você focar exclusivamente no seu rendimento.
+            Ambiente climatizado, máquinas selecionadas e área de peso livre organizada para o seu treino render.
           </p>
         </div>
 
-        {/* Category Selector Tabs - Chevron REMOVED to avoid fake navigation affordance */}
+        {/* Category Selector Tabs */}
         <div className="flex items-center gap-2 overflow-x-auto pb-2.5 mb-6 sm:mb-8 no-scrollbar touch-pan-x">
           {categories.map((cat) => {
             const isActive = activeCategory.id === cat.id;
@@ -53,7 +53,7 @@ export function Estrutura() {
         </div>
 
         {/* Interactive Feature Display */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch mb-10 sm:mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch mb-8 sm:mb-10">
           {/* Main Large Visual */}
           <div className="lg:col-span-8 relative aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden border border-zinc-800 bg-zinc-900 group">
             <Image
@@ -70,7 +70,7 @@ export function Estrutura() {
             <div className="absolute bottom-3.5 sm:bottom-5 left-3.5 sm:left-5 right-3.5 sm:right-5 flex items-end justify-between gap-3 pointer-events-auto">
               <div>
                 <span className="inline-block px-2 py-0.5 text-[10px] font-mono font-bold uppercase bg-[#84ff00] text-black mb-1">
-                  ÁREA OFICIAL
+                  SETOR POWER
                 </span>
                 <h3 className="font-display font-bold text-xl sm:text-3xl uppercase text-white tracking-wide">
                   {activeCategory.name}
@@ -92,7 +92,7 @@ export function Estrutura() {
             <div>
               <div className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-[#84ff00] mb-2">
                 <Shield className="w-3.5 h-3.5" />
-                <span>ESPECIFICAÇÕES DA ÁREA</span>
+                <span>DETALHES DO ESPAÇO</span>
               </div>
 
               <h4 className="font-display font-bold text-lg sm:text-xl uppercase text-white mb-2">
@@ -130,8 +130,8 @@ export function Estrutura() {
         </div>
 
         {/* Confirmed Amenities Pill Grid */}
-        <div className="p-4 sm:p-6 bg-zinc-950 border border-zinc-850">
-          <div className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-3">
+        <div className="p-4 sm:p-5 bg-zinc-950 border border-zinc-850">
+          <div className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-2.5">
             COMODIDADES & ESTRUTURA CONFIRMADA:
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 text-xs text-zinc-300">

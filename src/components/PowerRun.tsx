@@ -5,7 +5,7 @@ import { ArrowUpRight, Trophy, Route, Calendar } from "lucide-react";
 
 export function PowerRun() {
   return (
-    <section id="power-run" className="relative py-14 sm:py-20 lg:py-28 bg-[#080808] border-b border-zinc-900 overflow-hidden scroll-mt-20">
+    <section id="power-run" className="relative py-12 sm:py-16 lg:py-24 bg-[#080808] border-b border-zinc-900 overflow-hidden scroll-mt-20">
       {/* Background Subtle Track Lines & Glow */}
       <div className="absolute inset-0 bg-radial-gradient opacity-40 pointer-events-none" />
 
@@ -33,7 +33,7 @@ export function PowerRun() {
               </p>
 
               <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-5 max-w-lg">
-                Em 2026, a Power Run levou a comunidade para uma prova de 5 km em São Félix do Xingu. Treino, desafio e movimento além da academia.
+                A Power Run reuniu corredores e alunos para um percurso de 5 km em São Félix do Xingu. Treino, desafio e movimento ao ar livre.
               </p>
 
               {/* Race Specs Grid */}
@@ -51,7 +51,7 @@ export function PowerRun() {
                 <div>
                   <div className="flex items-center gap-1 text-zinc-400 text-[10px] font-mono mb-0.5">
                     <Trophy className="w-3 h-3 text-[#84ff00]" />
-                    <span>PROVA</span>
+                    <span>MODALIDADE</span>
                   </div>
                   <div className="text-base sm:text-lg font-display font-bold text-white">
                     CORRIDA 5K
@@ -61,10 +61,10 @@ export function PowerRun() {
                 <div>
                   <div className="flex items-center gap-1 text-zinc-400 text-[10px] font-mono mb-0.5">
                     <Calendar className="w-3 h-3 text-[#84ff00]" />
-                    <span>STATUS</span>
+                    <span>EDIÇÃO</span>
                   </div>
                   <div className="text-[11px] sm:text-xs font-display font-bold text-[#84ff00] uppercase mt-0.5">
-                    EDIÇÃO 2026
+                    2026
                   </div>
                 </div>
               </div>
@@ -95,9 +95,9 @@ export function PowerRun() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
 
-                {/* Sub-badge */}
+                {/* Sub-badge neutro sem qualificações inventadas */}
                 <div className="absolute top-3 right-3 px-2.5 py-0.5 bg-black/85 backdrop-blur-md border border-zinc-700 text-[9px] font-mono uppercase tracking-widest text-[#84ff00]">
-                  PROVA OFICIAL
+                  POWER RUN 5K
                 </div>
 
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-zinc-300">

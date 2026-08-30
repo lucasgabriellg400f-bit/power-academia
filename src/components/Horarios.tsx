@@ -6,7 +6,7 @@ export function Horarios() {
   const { openingHours } = siteConfig;
 
   return (
-    <section id="horarios" className="relative py-14 sm:py-20 lg:py-28 bg-[#080808] border-b border-zinc-900 overflow-hidden scroll-mt-20">
+    <section id="horarios" className="relative py-12 sm:py-16 lg:py-24 bg-[#080808] border-b border-zinc-900 overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-2xl mb-8 sm:mb-12">
@@ -18,7 +18,7 @@ export function Horarios() {
             <span className="text-[#84ff00]">SEM INTERRUPÇÃO.</span>
           </h2>
           <p className="text-xs sm:text-sm text-zinc-400 font-normal leading-relaxed">
-            Estrutura aberta das 05:30 às 22:00 de forma ininterrupta para se adaptar perfeitamente ao seu dia a dia.
+            Atendimento ininterrupto de segunda a sexta para você treinar com tranquilidade na sua rotina.
           </p>
         </div>
 

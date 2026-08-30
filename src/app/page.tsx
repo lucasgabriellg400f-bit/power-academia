@@ -9,7 +9,6 @@ import { Estrutura } from "@/components/Estrutura";
 import { Experiencia } from "@/components/Experiencia";
 import { Comunidade } from "@/components/Comunidade";
 import { PowerRun } from "@/components/PowerRun";
-import { PlantaoPower } from "@/components/PlantaoPower";
 import { Planos } from "@/components/Planos";
 import { AulaExperimental } from "@/components/AulaExperimental";
 import { Horarios } from "@/components/Horarios";
@@ -32,7 +31,7 @@ export default function Home() {
       {/* 1. Hero 100vh */}
       <Hero />
 
-      {/* 2. Manifesto & Kinetic Brand Pillars (Approved & Frozen) */}
+      {/* 2. Manifesto (Approved & Frozen) */}
       <Manifesto />
 
       {/* 3. História & Desde 2022 */}
@@ -50,28 +49,25 @@ export default function Home() {
       {/* 7. Submarca Esportiva Power Run 5K */}
       <PowerRun />
 
-      {/* 8. Conteúdo Power & Drops Editoriais */}
-      <PlantaoPower />
-
-      {/* 9. Planos & Matrícula */}
+      {/* 8. Planos & Matrícula (Direct Transition from Power Run) */}
       <Planos />
 
-      {/* 10. Conversão de Aula Experimental */}
+      {/* 9. Conversão de Aula Experimental */}
       <AulaExperimental />
 
-      {/* 11. Horários de Atendimento */}
+      {/* 10. Horários de Atendimento */}
       <Horarios />
 
-      {/* 12. Localização & Ações Google Maps */}
+      {/* 11. Localização & Ações Google Maps */}
       <Localizacao />
 
-      {/* 13. CTA Final Grandioso */}
+      {/* 12. CTA Final Grandioso */}
       <CtaFinal />
 
-      {/* 14. Footer Minimalista & Ações Conecte-se */}
+      {/* 13. Footer Minimalista & Ações Conecte-se */}
       <Footer />
 
-      {/* 15. Mobile Sticky CTA Bar */}
+      {/* 14. Mobile Sticky CTA Bar */}
       <MobileStickyCta />
 
       {/* Interactive Booking Modal */}

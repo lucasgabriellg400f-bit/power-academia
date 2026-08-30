@@ -4,13 +4,13 @@ import { ArrowRight, MessageSquare, Clock, MapPin, CheckCircle2 } from "lucide-r
 
 export function AulaExperimental() {
   return (
-    <section id="aula-experimental" className="relative py-14 sm:py-20 lg:py-28 bg-[#0d0d0d] border-b border-zinc-900 overflow-hidden scroll-mt-20">
+    <section id="aula-experimental" className="relative py-12 sm:py-16 lg:py-24 bg-[#0d0d0d] border-b border-zinc-900 overflow-hidden scroll-mt-20">
       {/* Background Subtle Radial */}
       <div className="absolute inset-0 bg-radial-gradient opacity-30 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="p-5 sm:p-8 lg:p-12 bg-gradient-to-br from-[#121212] via-[#0f0f0f] to-black border-2 border-zinc-800 relative overflow-hidden shadow-2xl">
-          {/* Top Green Accent Line (Preserved as key signature element) */}
+          {/* Top Green Accent Line */}
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#84ff00] to-transparent opacity-80" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
@@ -30,7 +30,7 @@ export function AulaExperimental() {
               </h2>
 
               <p className="text-xs sm:text-base text-zinc-300 font-normal leading-relaxed mb-5 max-w-lg">
-                Venha conhecer nosso espaço, testar os equipamentos e sentir a energia de treinar de verdade em São Félix do Xingu.
+                Venha conhecer nosso espaço, testar os equipamentos e sentir o ritmo de treino na Power em São Félix do Xingu.
               </p>
 
               {/* Bullet Points */}

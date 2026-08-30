@@ -6,7 +6,7 @@ import { AthleticFlameIcon } from "@/components/icons/AthleticFlameIcon";
 
 export function CtaFinal() {
   return (
-    <section className="relative py-16 sm:py-24 lg:py-36 bg-black overflow-hidden border-b border-zinc-900">
+    <section className="relative py-14 sm:py-20 lg:py-28 bg-black overflow-hidden border-b border-zinc-900">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <Image
@@ -25,11 +25,11 @@ export function CtaFinal() {
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/80 border border-[#84ff00]/40 backdrop-blur-md mb-4 sm:mb-6">
           <AthleticFlameIcon className="w-3.5 h-3.5 text-[#84ff00]" />
           <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-widest text-[#84ff00]">
-            SUA VEZ DE EVOLUIR
+            SUA VEZ DE COMEÇAR
           </span>
         </div>
 
-        {/* Headline with Restored Mobile Impact */}
+        {/* Headline */}
         <h2 className="font-display font-bold text-[3.2rem] xs:text-6xl sm:text-7xl lg:text-8xl uppercase tracking-tighter text-white leading-[0.86] mb-4 sm:mb-6">
           SUA PRÓXIMA <br />
           VERSÃO COMEÇA <br />
@@ -37,7 +37,7 @@ export function CtaFinal() {
         </h2>
 
         <p className="text-sm sm:text-lg text-zinc-300 font-normal leading-relaxed max-w-xl mb-6 sm:mb-8">
-          Escolha a estrutura, a constância e a comunidade que vão te levar ao próximo nível em São Félix do Xingu.
+          Escolha a estrutura e o ambiente ideal para você treinar com foco em São Félix do Xingu.
         </p>
 
         {/* Big CTA Buttons with Functional Targets */}

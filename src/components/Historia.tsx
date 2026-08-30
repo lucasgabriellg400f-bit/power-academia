@@ -5,7 +5,7 @@ import { Calendar, CheckCircle2 } from "lucide-react";
 
 export function Historia() {
   return (
-    <section id="sobre" className="relative py-14 sm:py-20 lg:py-28 bg-[#0d0d0d] border-b border-zinc-900 overflow-hidden scroll-mt-20">
+    <section id="sobre" className="relative py-12 sm:py-16 lg:py-24 bg-[#0d0d0d] border-b border-zinc-900 overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           {/* Left Column: Image with Stats Overlay */}
@@ -13,7 +13,7 @@ export function Historia() {
             <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl">
               <Image
                 src="/images/historia/historia.jpg"
-                alt="Ambiente e evolução da Power Academia em São Félix do Xingu"
+                alt="Ambiente da Power Academia em São Félix do Xingu"
                 fill
                 className="object-cover object-center filter brightness-95 contrast-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -27,7 +27,7 @@ export function Historia() {
                     {siteConfig.stats.yearsHistory}
                   </div>
                   <div className="text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-zinc-400">
-                    Movendo São Félix do Xingu
+                    São Félix do Xingu
                   </div>
                 </div>
                 <div className="text-right">
@@ -35,7 +35,7 @@ export function Historia() {
                     05:30 — 22:00
                   </div>
                   <div className="text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-zinc-400">
-                    Sem Fechar no Almoço
+                    Segunda a Sexta
                   </div>
                 </div>
               </div>
@@ -47,21 +47,21 @@ export function Historia() {
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-zinc-800 w-fit mb-3">
               <Calendar className="w-3.5 h-3.5 text-[#84ff00]" />
               <span className="text-[11px] font-mono uppercase tracking-widest text-zinc-300">
-                NOSSA TRAJETÓRIA
+                NOSSA HISTÓRIA
               </span>
             </div>
 
             <h2 className="font-display font-bold text-[2.6rem] xs:text-5xl sm:text-6xl uppercase tracking-tight text-white leading-[0.88] mb-4 sm:mb-5">
               DESDE 2022. <br />
-              <span className="text-[#84ff00]">MOVENDO SÃO FÉLIX.</span>
+              <span className="text-[#84ff00]">CONSTRUINDO FORÇA.</span>
             </h2>
 
-            <p className="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed mb-4">
-              Desde 2022, a POWER nasceu em São Félix do Xingu com a missão de elevar o padrão do treinamento de força, saúde e constância.
+            <p className="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed mb-3">
+              Fundada em 2022 em São Félix do Xingu, a POWER nasceu com o propósito de oferecer musculação séria, ambiente estruturado e atendimento próximo para a nossa cidade.
             </p>
 
             <p className="text-xs sm:text-sm text-zinc-400 font-normal leading-relaxed mb-6">
-              Um ambiente preparado para quem busca disciplina e evolução contínua, com profissionais dedicados a orientar cada etapa do seu treino.
+              Um espaço pensado para o seu rendimento diário, com equipamentos selecionados e instrutores prontos para orientar seu treino.
             </p>
 
             {/* Feature Bullets */}
@@ -70,10 +70,10 @@ export function Historia() {
                 <CheckCircle2 className="w-4 h-4 text-[#84ff00] shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-xs sm:text-sm font-bold text-white uppercase font-display">
-                    Treino & Constância
+                    Treino Sério
                   </h3>
                   <p className="text-[11px] sm:text-xs text-zinc-400 leading-relaxed">
-                    Estrutura séria para você não parar.
+                    Ambiente focado no seu progresso.
                   </p>
                 </div>
               </div>
@@ -85,7 +85,7 @@ export function Historia() {
                     Comunidade Ativa
                   </h3>
                   <p className="text-[11px] sm:text-xs text-zinc-400 leading-relaxed">
-                    Pessoas que evoluem juntas em SFX.
+                    Alunos que treinam juntos todos os dias.
                   </p>
                 </div>
               </div>

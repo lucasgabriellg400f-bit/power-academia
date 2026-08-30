@@ -4,13 +4,13 @@ import { Check, ArrowUpRight, MessageSquare } from "lucide-react";
 
 export function Planos() {
   return (
-    <section id="planos" className="relative py-14 sm:py-20 lg:py-28 bg-[#080808] border-b border-zinc-900 overflow-hidden scroll-mt-20">
+    <section id="planos" className="relative py-12 sm:py-16 lg:py-24 bg-[#080808] border-b border-zinc-900 overflow-hidden scroll-mt-20">
       {/* Subtle Glow in background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#84ff00]/[0.025] rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header with Restored Mobile Impact */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
           <span className="text-[#84ff00] font-mono text-xs uppercase tracking-widest block mb-2">
             {"// PLANOS & MATRÍCULA"}
           </span>
@@ -19,7 +19,7 @@ export function Planos() {
             <span className="text-[#84ff00]">COMO COMEÇAR.</span>
           </h2>
           <p className="text-xs sm:text-base text-zinc-300 font-normal leading-relaxed max-w-xl mx-auto">
-            Constância gera resultado. Escolha a opção ideal para sua rotina e comece a treinar na melhor estrutura de São Félix do Xingu.
+            Escolha a opção ideal para sua rotina e venha treinar na Power.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export function Planos() {
                     POWER ESSENCIAL
                   </h3>
                   <p className="text-xs text-zinc-400 font-normal mt-0.5">
-                    O plano ideal para construir constância na sua semana.
+                    O plano para quem busca regularidade nos treinos.
                   </p>
                 </div>
               </div>
@@ -81,13 +81,13 @@ export function Planos() {
                   <div className="w-4 h-4 rounded-full bg-[#84ff00] text-black flex items-center justify-center shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 stroke-[3]" />
                   </div>
-                  <span><strong>App de Treinos Power</strong> para acompanhar sua evolução</span>
+                  <span><strong>App de Treinos Power</strong> para acompanhar seus treinos</span>
                 </div>
                 <div className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-200">
                   <div className="w-4 h-4 rounded-full bg-[#84ff00] text-black flex items-center justify-center shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 stroke-[3]" />
                   </div>
-                  <span>Acompanhamento e suporte dos instrutores em sala</span>
+                  <span>Orientação dos instrutores em sala</span>
                 </div>
               </div>
             </div>
@@ -117,13 +117,13 @@ export function Planos() {
                   OUTROS PLANOS POWER
                 </h3>
                 <p className="text-xs text-zinc-400 font-normal mt-1 leading-relaxed">
-                  Temos opções para diferentes rotinas, disponibilidades e objetivos de treino.
+                  Opções adaptadas para diferentes rotinas e disponibilidades de horário.
                 </p>
               </div>
 
               <div className="py-4 border-y border-zinc-800 mb-5">
                 <span className="block text-[10px] font-mono uppercase tracking-widest text-zinc-500 mb-0.5">
-                  OPÇÕES DISPONÍVEIS:
+                  MODALIDADES:
                 </span>
                 <div className="text-xl sm:text-2xl font-display font-bold text-white tracking-wide">
                   CONSULTE NOSSA EQUIPE
@@ -137,7 +137,7 @@ export function Planos() {
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-3.5 h-3.5 text-[#84ff00] shrink-0 mt-0.5" />
-                  <span>Planos adaptados para sua constância</span>
+                  <span>Planos adaptados ao seu ritmo semanal</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-3.5 h-3.5 text-[#84ff00] shrink-0 mt-0.5" />
@@ -162,7 +162,7 @@ export function Planos() {
         </div>
 
         {/* Note */}
-        <div className="mt-8 text-center text-[11px] font-mono text-zinc-500">
+        <div className="mt-6 text-center text-[11px] font-mono text-zinc-500">
           Matrículas e orientações de planos diretamente no WhatsApp oficial da POWER ACADEMIA.
         </div>
       </div>

@@ -83,16 +83,6 @@ export interface SiteConfig {
     subtitle: string;
     description: string;
   }>;
-  articles: Array<{
-    id: string;
-    category: string;
-    title: string;
-    excerpt: string;
-    date: string;
-    readTime: string;
-    image: string;
-    content: string;
-  }>;
 }
 
 const WHATSAPP_NUMBER = "5594991972980";
@@ -116,7 +106,7 @@ export const siteConfig: SiteConfig = {
     line3: "ACONTECEM.",
   },
   description:
-    "Estrutura completa, constância e a melhor atmosfera de treino de São Félix do Xingu.",
+    "Treino de musculação, pesos livres e ambiente focado na sua rotina em São Félix do Xingu.",
   city: "São Félix do Xingu",
   state: "PA",
   stateFull: "Pará",
@@ -188,7 +178,6 @@ export const siteConfig: SiteConfig = {
     { label: "Diferenciais", href: "#experiencia" },
     { label: "Comunidade", href: "#comunidade" },
     { label: "Power Run", href: "#power-run" },
-    { label: "Conteúdo", href: "#conteudos" },
     { label: "Planos", href: "#planos" },
     { label: "Horários", href: "#horarios" },
     { label: "Localização", href: "#localizacao" },
@@ -208,135 +197,97 @@ export const siteConfig: SiteConfig = {
     {
       id: "musculacao",
       name: "MUSCULAÇÃO",
-      subtitle: "Estrutura completa para força e hipertrofia",
+      subtitle: "Equipamentos para treino de força",
       image: "/images/estrutura/musculacao.jpg",
       description:
-        "Área estruturada para treino de força, com variedade de máquinas e organização planejada para seu treino render.",
+        "Área ampla de musculação com máquinas direcionadas e bancos reguláveis para todos os grupos musculares.",
       highlights: [
         "Halteres e bancos reguláveis",
-        "Piso de alta absorção e resistência",
+        "Piso emborrachado de alta absorção",
         "Disposição pensada para o fluxo de treino",
       ],
     },
     {
       id: "peso-livre",
       name: "PESO LIVRE",
-      subtitle: "Barras, racks e anilhas para treino fundamental",
+      subtitle: "Barras, racks e anilhas",
       image: "/images/estrutura/peso-livre.jpg",
       description:
-        "Espaço dedicado aos movimentos livres e levantamentos básicos com total estabilidade.",
+        "Espaço para agachamentos, levantamentos e movimentos livres com total segurança e espaço de manobra.",
       highlights: [
         "Racks de agachamento e supino",
-        "Barras e anilhas para todos os níveis",
-        "Espaço amplo para execução com segurança",
+        "Barras olímpicas e anilhas variadas",
+        "Área aberta para execução correta",
       ],
     },
     {
       id: "maquinas",
       name: "MÁQUINAS",
-      subtitle: "Linha selecionada para isolamento e precisão",
+      subtitle: "Linha articulada e convergente",
       image: "/images/estrutura/maquinas.jpg",
       description:
-        "Equipamentos articulados e convergentes que proporcionam trajetória anatômica e estabilidade no movimento.",
+        "Equipamentos guiados com ergonomia anatômica para movimentos biomecanicamente estáveis.",
       highlights: [
-        "Linha de máquinas guiadas",
-        "Ajustes ergonômicos rápidos",
-        "Polias e cabos de movimento fluido",
+        "Aparelhos guiados e articulados",
+        "Ajustes rápidos de carga e altura",
+        "Polias duplas e cabos reforçados",
       ],
     },
     {
       id: "cardio",
       name: "CARDIO",
-      subtitle: "Condicionamento e resistência física",
+      subtitle: "Condicionamento e esteiras",
       image: "/images/estrutura/cardio.jpg",
       description:
-        "Equipamentos para aquecimento, condicionamento aeróbico e preparação física para corrida.",
+        "Setor aeróbico para aquecimento, resistência cardiovascular e suporte para corredores.",
       highlights: [
-        "Esteiras e ergômetros modernos",
-        "Controle de ritmo e intensidade",
-        "Ambiente climatizado e arejado",
+        "Esteiras e bicicletas ergométricas",
+        "Ambiente arejado e climatizado",
+        "Ideal para aquecimento ou treinos aeróbicos",
       ],
     },
     {
       id: "espaco-treino",
       name: "ESPAÇO DE TREINO",
-      subtitle: "Circulação ampla e foco no rendimento",
+      subtitle: "Circulação ampla e organização",
       image: "/images/estrutura/espaco.jpg",
       description:
-        "Ambiente planejado para movimentação livre, sem aglomeração entre os aparelhos.",
+        "Salão planejado com corredores livres para circulação sem aglomeração entre os aparelhos.",
       highlights: [
         "Disposição inteligente de equipamentos",
-        "Área de alongamento e mobilidade",
-        "Atmosfera de foco total na evolução",
+        "Área para mobilidade e alongamento",
+        "Ambiente limpo e bem iluminado",
       ],
     },
   ],
   experienciaDiferenciais: [
     {
       number: "01",
-      title: "ESTRUTURA COMPLETA",
-      subtitle: "Equipamentos focados em rendimento",
+      title: "ESTRUTURA ORGANIZADA",
+      subtitle: "Espaço amplo e setorizado",
       description:
-        "Ambiente climatizado, máquinas selecionadas e setorização inteligente para você treinar com foco e segurança.",
+        "Ambiente climatizado, máquinas selecionadas e organização planejada para seu treino render sem filas.",
     },
     {
       number: "02",
-      title: "ACOMPANHAMENTO",
-      subtitle: "Profissionais presentes em sala",
+      title: "SUPORTE EM SALA",
+      subtitle: "Profissionais disponíveis",
       description:
-        "Equipe técnica disponível para orientar execução, postura e direcionar sua evolução com segurança.",
+        "Instrutores no salão para orientar postura, execução correta dos exercícios e tirar dúvidas.",
     },
     {
       number: "03",
       title: "HORÁRIO CONTÍNUO",
-      subtitle: "05:30 às 22:00 sem fechar no almoço",
+      subtitle: "05:30 às 22:00 direto",
       description:
-        "Flexibilidade total de segunda a sexta para você encaixar o treino na sua rotina sem desculpas.",
+        "Portas abertas o dia todo de segunda a sexta para você treinar no melhor momento do seu dia.",
     },
     {
       number: "04",
-      title: "COMUNIDADE & CONSTÂNCIA",
-      subtitle: "Pessoas que treinam juntas em SFX",
+      title: "COMUNIDADE ATIVA",
+      subtitle: "Ambiente sério e motivador",
       description:
-        "Uma cultura de respeito, disciplina e energia coletiva que incentiva você a voltar no dia seguinte.",
-    },
-  ],
-  articles: [
-    {
-      id: "beneficios-musculacao",
-      category: "SAÚDE & FORÇA",
-      title: "4 Benefícios da Musculação para sua Saúde e Longevidade",
-      excerpt:
-        "Fortalecimento muscular, melhora da postura, controle metabólico e disposição diária.",
-      date: "Conteúdo Power",
-      readTime: "2 min",
-      image: "/images/plantao/p1.jpg",
-      content:
-        "A musculação vai muito além da estética: ela fortalece articulações, acelera o metabolismo, melhora a densidade óssea e proporciona mais disposição para o seu dia a dia. Na POWER, estruturamos os treinos para que cada fase da sua evolução seja segura e consistente.",
-    },
-    {
-      id: "constancia-vs-intensidade",
-      category: "HÁBITO & DISCIPLINA",
-      title: "Por Que Constância Vale Mais que Intensidade?",
-      excerpt:
-        "Treinar com regularidade todos os dias supera qualquer treino isolado excessivo.",
-      date: "Conteúdo Power",
-      readTime: "2 min",
-      image: "/images/plantao/p2.jpg",
-      content:
-        "Resultados duradouros são construídos com repetição e hábito. Mais vale manter 3 a 5 treinos bem executados por semana do que treinar pesado um único dia e parar. Com nosso horário ininterrupto das 05:30 às 22:00, você escolhe o melhor momento para não falhar.",
-    },
-    {
-      id: "habitos-rotina",
-      category: "PERFORMANCE DIÁRIA",
-      title: "Hábitos Simples que Fazem Toda a Diferença no seu Treino",
-      excerpt:
-        "Hidratação, aquecimento adequado, controle de carga e respeito ao descanso.",
-      date: "Conteúdo Power",
-      readTime: "2 min",
-      image: "/images/plantao/p3.jpg",
-      content:
-        "Pequenos ajustes na rotina potencializam seus resultados na musculação. Beber água durante o treino, realizar um aquecimento específico e focar na cadência correta dos movimentos protegem o corpo e garantem evolução contínua em São Félix do Xingu.",
+        "Espaço onde pessoas com diferentes objetivos treinam com foco, respeito mútuo e consistência.",
     },
   ],
 };

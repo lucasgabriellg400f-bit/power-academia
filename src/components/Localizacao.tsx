@@ -7,7 +7,7 @@ export function Localizacao() {
   const { business } = siteConfig;
 
   return (
-    <section id="localizacao" className="relative py-14 sm:py-20 lg:py-28 bg-[#0d0d0d] border-b border-zinc-900 overflow-hidden scroll-mt-20">
+    <section id="localizacao" className="relative py-12 sm:py-16 lg:py-24 bg-[#0d0d0d] border-b border-zinc-900 overflow-hidden scroll-mt-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="p-6 sm:p-10 lg:p-14 bg-gradient-to-br from-[#141414] to-[#0c0c0c] border border-zinc-800 shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -22,7 +22,7 @@ export function Localizacao() {
                 <span className="text-[#84ff00]">A POWER.</span>
               </h2>
 
-              {/* Functional Location Card (100% Clickable Surface to Google Maps) */}
+              {/* Functional Location Card */}
               <a
                 href={business.mapsUrl}
                 target="_blank"
@@ -50,7 +50,7 @@ export function Localizacao() {
               </a>
 
               <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed max-w-md">
-                Localização central e de fácil acesso em São Félix do Xingu. Venha nos visitar e conhecer de perto nossa estrutura de treino.
+                Localizada na Av. Osterno Maia, com fácil acesso no centro de São Félix do Xingu. Venha nos fazer uma visita.
               </p>
             </div>
 
