@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --brand-green: #84ff00;
+    --brand-green-hover: #98ff1a;
+    --brand-green-glow: rgba(132, 255, 0, 0.15);
+    --dark-bg: #080808;
+    --dark-surface: #111111;
+    --dark-card: #161616;
+    --dark-card-hover: #1e1e1e;
+    --dark-border: #242424;
+    --dark-border-light: #333333;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
+  }
+
+  * {
+    border-color: var(--dark-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    color-scheme: dark;
+    background-color: #080808;
+  }
+
+  body {
+    background-color: #080808;
+    color: #ffffff;
+    overflow-x: hidden;
+    touch-action: manipulation;
+  }
+
+  button, a, input, select {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background-color: #84ff00;
+    color: #080808;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Typography Utilities */
+.font-display {
+  font-family: var(--font-oswald), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-body {
+  font-family: var(--font-jakarta), sans-serif;
+}
+
+/* Athletic Grid & Noise accents */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 30%, rgba(132, 255, 0, 0.06) 0%, transparent 70%);
+}
+
+.glow-green-sm {
+  box-shadow: 0 0 20px -5px rgba(132, 255, 0, 0.25);
+}
+
+.glow-green-md {
+  box-shadow: 0 0 35px -8px rgba(132, 255, 0, 0.35);
+}
+
+.text-stroke-subtle {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+  color: transparent;
+}
+
+.text-stroke-green {
+  -webkit-text-stroke: 1.5px #84ff00;
+  color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242424;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #84ff00;
 }
