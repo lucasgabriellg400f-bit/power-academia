@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "POWER ACADEMIA",
     images: [
       {
-        url: "/images/hero-bg.jpg",
+        url: "/images/hero/hero-bg.jpg",
         width: 1200,
         height: 630,
         alt: "POWER ACADEMIA - São Félix do Xingu",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "POWER ACADEMIA | São Félix do Xingu - PA",
     description:
       "Estrutura, constância e comunidade feita para quem busca evolução real.",
-    images: ["/images/hero-bg.jpg"],
+    images: ["/images/hero/hero-bg.jpg"],
   },
   robots: {
     index: true,
@@ -102,7 +102,7 @@ export default function RootLayout({
     url: "https://poweracademia.com.br",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Av. Principal, Centro",
+      streetAddress: siteConfig.business.address,
       addressLocality: "São Félix do Xingu",
       addressRegion: "PA",
       postalCode: "68380-000",

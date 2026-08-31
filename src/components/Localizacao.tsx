@@ -1,7 +1,8 @@
 import React from "react";
 import { siteConfig, createWhatsAppUrl } from "@/config/site";
-import { MapPin, Navigation, MessageSquare, ArrowUpRight } from "lucide-react";
+import { MapPin, Navigation, ArrowUpRight } from "lucide-react";
 import { InstagramIcon } from "@/components/icons/InstagramIcon";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export function Localizacao() {
   const { business } = siteConfig;
@@ -22,18 +23,13 @@ export function Localizacao() {
                 <span className="text-[#84ff00]">A POWER.</span>
               </h2>
 
-              {/* Functional Location Card */}
-              <a
-                href={business.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-3.5 my-5 p-4 bg-black/70 border border-zinc-800 hover:border-[#84ff00]/60 active:bg-black/90 transition-all duration-200 group cursor-pointer"
-              >
-                <div className="p-2.5 bg-[#84ff00]/10 border border-[#84ff00]/30 text-[#84ff00] group-hover:border-[#84ff00] shrink-0 mt-0.5 transition-colors">
+              {/* Informative Location Card */}
+              <div className="flex items-start gap-3.5 my-5 p-4 bg-black/70 border border-zinc-800">
+                <div className="p-2.5 bg-[#84ff00]/10 border border-[#84ff00]/30 text-[#84ff00] shrink-0 mt-0.5">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div className="flex-1">
-                  <span className="block font-display font-bold text-lg sm:text-xl uppercase text-white tracking-wide group-hover:text-[#84ff00] transition-colors">
+                  <span className="block font-display font-bold text-lg sm:text-xl uppercase text-white tracking-wide">
                     {business.address}
                   </span>
                   <span className="text-xs sm:text-sm text-zinc-300 block">
@@ -42,12 +38,8 @@ export function Localizacao() {
                   <span className="text-[11px] font-mono text-zinc-400 uppercase mt-0.5 block">
                     CEP {business.cep}
                   </span>
-                  <span className="inline-flex items-center gap-1.5 text-xs font-display font-bold uppercase tracking-wider text-[#84ff00] mt-2">
-                    <span>ABRIR NO GOOGLE MAPS</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </span>
                 </div>
-              </a>
+              </div>
 
               <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed max-w-md">
                 Localizada na Av. Osterno Maia, com fácil acesso no centro de São Félix do Xingu. Venha nos fazer uma visita.
@@ -76,7 +68,7 @@ export function Localizacao() {
                 className="w-full inline-flex items-center justify-between py-3.5 px-5 bg-zinc-900 hover:bg-zinc-800 active:bg-zinc-700 text-zinc-200 hover:text-white border border-zinc-700 hover:border-zinc-500 text-xs font-display font-bold uppercase tracking-wider transition-all min-h-[46px] group"
               >
                 <div className="flex items-center gap-2">
-                  <MessageSquare className="w-4 h-4 text-[#84ff00]" />
+                  <WhatsAppIcon className="w-4 h-4 text-[#84ff00]" />
                   <span>WHATSAPP OFICIAL</span>
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors" />

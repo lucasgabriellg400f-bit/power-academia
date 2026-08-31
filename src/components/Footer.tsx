@@ -2,8 +2,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig, createWhatsAppUrl } from "@/config/site";
-import { MessageSquare, MapPin, ArrowUpRight, ArrowUp } from "lucide-react";
+import { MapPin, ArrowUpRight, ArrowUp } from "lucide-react";
 import { InstagramIcon } from "@/components/icons/InstagramIcon";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +13,7 @@ export function Footer() {
   return (
     <footer className="bg-[#050505] border-t border-zinc-900 text-zinc-400 text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-10 border-b border-zinc-850">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-10 border-b border-zinc-800">
           {/* Col 1: Official Logo & Tagline */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="#" className="inline-block" aria-label="POWER ACADEMIA - Voltar ao início">
@@ -70,7 +71,7 @@ export function Footer() {
                 className="flex items-center justify-between p-3.5 bg-zinc-900/80 hover:bg-zinc-900 active:bg-zinc-800 border border-zinc-800 hover:border-[#84ff00]/60 transition-all duration-200 group cursor-pointer"
               >
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-[#84ff00]/10 border border-[#84ff00]/30 text-[#84ff00] group-hover:border-[#84ff00] transition-colors">
+                  <div className="p-2 bg-[#84ff00]/10 border border-[#84ff00]/30 text-[#84ff00] group-hover:border-[#84ff00] transition-colors rounded-[6px]">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
@@ -96,8 +97,8 @@ export function Footer() {
                 className="flex items-center justify-between p-3.5 bg-zinc-900/80 hover:bg-zinc-900 active:bg-zinc-800 border border-zinc-800 hover:border-[#84ff00]/60 transition-all duration-200 group cursor-pointer"
               >
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-[#84ff00]/10 border border-[#84ff00]/30 text-[#84ff00] group-hover:border-[#84ff00] transition-colors">
-                    <MessageSquare className="w-4 h-4" />
+                  <div className="p-2 bg-[#84ff00]/10 border border-[#84ff00]/30 text-[#84ff00] group-hover:border-[#84ff00] transition-colors rounded-[6px]">
+                    <WhatsAppIcon className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="block font-bold text-white text-xs uppercase font-display group-hover:text-[#84ff00] transition-colors">
@@ -122,7 +123,7 @@ export function Footer() {
                 className="flex items-center justify-between p-3.5 bg-zinc-900/80 hover:bg-zinc-900 active:bg-zinc-800 border border-zinc-800 hover:border-[#84ff00]/60 transition-all duration-200 group cursor-pointer"
               >
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-[#84ff00]/10 border border-[#84ff00]/30 text-[#84ff00] group-hover:border-[#84ff00] transition-colors">
+                  <div className="p-2 bg-[#84ff00]/10 border border-[#84ff00]/30 text-[#84ff00] group-hover:border-[#84ff00] transition-colors rounded-[6px]">
                     <InstagramIcon className="w-4 h-4" />
                   </div>
                   <div>

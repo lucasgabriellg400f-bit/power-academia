@@ -49,7 +49,7 @@ export function Experiencia() {
                 </p>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-zinc-850 flex items-center justify-between text-[10px] font-mono text-zinc-500">
+              <div className="mt-5 pt-3 border-t border-zinc-800 flex items-center justify-between text-[10px] font-mono text-zinc-500">
                 <span>PADRÃO POWER</span>
                 <span>SFX/PA</span>
               </div>

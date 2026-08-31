@@ -10,19 +10,19 @@ export function Comunidade() {
       src: "/images/comunidade/c1.jpg",
       alt: "Comunidade de alunos na Power Academia em São Félix do Xingu",
       label: "ENERGIA COLETIVA",
-      span: "lg:col-span-6 aspect-square sm:aspect-[4/3]",
+      span: "sm:col-span-1 lg:col-span-6 aspect-[4/3] lg:aspect-[16/10]",
     },
     {
       src: "/images/comunidade/c2.jpg",
       alt: "Orientação e acompanhamento em sala",
       label: "ACOMPANHAMENTO",
-      span: "lg:col-span-3 aspect-square sm:aspect-auto",
+      span: "sm:col-span-1 lg:col-span-3 aspect-[4/3] lg:aspect-[16/10]",
     },
     {
       src: "/images/comunidade/c3.jpg",
       alt: "Constância nos treinos diários",
       label: "SUPERANDO LIMITES",
-      span: "lg:col-span-3 aspect-square sm:aspect-auto",
+      span: "sm:col-span-1 lg:col-span-3 aspect-[4/3] lg:aspect-[16/10]",
     },
   ];
 
@@ -49,7 +49,7 @@ export function Comunidade() {
             href={siteConfig.business.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 sm:p-5 bg-zinc-900/90 border border-zinc-800 hover:border-[#84ff00]/60 active:bg-zinc-800/90 transition-all duration-200 group cursor-pointer"
+            className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 sm:p-5 bg-zinc-900/90 border border-zinc-800 hover:border-[#84ff00]/60 active:bg-zinc-800/90 rounded-[8px] transition-all duration-200 group cursor-pointer"
           >
             <div className="flex items-center gap-3.5">
               <div className="p-2.5 bg-[#84ff00]/10 border border-[#84ff00]/30 text-[#84ff00] group-hover:border-[#84ff00] transition-colors">
@@ -76,7 +76,7 @@ export function Comunidade() {
         </div>
 
         {/* Editorial Photo Mosaic */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3.5">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-12 gap-3.5">
           {photos.map((photo, idx) => (
             <div
               key={idx}

@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { siteConfig, createWhatsAppUrl } from "@/config/site";
 import { ArrowUpRight, CheckCircle } from "lucide-react";
-import { AthleticFlameIcon } from "@/components/icons/AthleticFlameIcon";
 
 export function CtaFinal() {
   return (
@@ -21,9 +20,15 @@ export function CtaFinal() {
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
-        {/* Eyebrow with refined geometric flame */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/80 border border-[#84ff00]/40 backdrop-blur-md mb-4 sm:mb-6">
-          <AthleticFlameIcon className="w-3.5 h-3.5 text-[#84ff00]" />
+        {/* Eyebrow badge with official power symbol */}
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-black/80 border border-[#84ff00]/40 backdrop-blur-md mb-4 sm:mb-6">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/icons/power-symbol-v2.png"
+            alt=""
+            aria-hidden="true"
+            className="w-[18px] h-[18px] object-contain shrink-0 select-none pointer-events-none"
+          />
           <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-widest text-[#84ff00]">
             SUA VEZ DE COMEÇAR
           </span>
@@ -43,7 +48,9 @@ export function CtaFinal() {
         {/* Big CTA Buttons with Functional Targets */}
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
           <a
-            href="#aula-experimental"
+            href={createWhatsAppUrl(siteConfig.whatsappMessages.finalCta)}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#84ff00] hover:bg-[#98ff1a] active:scale-[0.98] text-black font-display font-black text-base sm:text-xl uppercase tracking-wider transition-all duration-200 shadow-[0_0_30px_rgba(132,255,0,0.4)] cursor-pointer group min-h-[48px]"
           >
             <span>VEM SER POWER</span>
@@ -51,7 +58,7 @@ export function CtaFinal() {
           </a>
 
           <a
-            href={createWhatsAppUrl(siteConfig.whatsappMessages.finalCta)}
+            href={createWhatsAppUrl(siteConfig.whatsappMessages.general)}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 bg-black/70 hover:bg-zinc-900 active:bg-zinc-800 border border-zinc-700 text-white font-display font-bold text-xs sm:text-sm uppercase tracking-wider transition-all min-h-[48px]"
@@ -63,7 +70,7 @@ export function CtaFinal() {
         <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs font-mono text-zinc-400">
           <span className="flex items-center gap-1.5">
             <CheckCircle className="w-3.5 h-3.5 text-[#84ff00]" />
-            05:30 às 22:00 direto
+            Estrutura Climatizada
           </span>
           <span>•</span>
           <span className="flex items-center gap-1.5">

@@ -45,7 +45,7 @@ export function AulaExperimental() {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#84ff00] shrink-0" />
-                  <span>Atendimento das 05:30 às 22:00</span>
+                  <span>Ambiente climatizado e estruturado</span>
                 </div>
               </div>
 

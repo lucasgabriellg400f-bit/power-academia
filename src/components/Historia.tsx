@@ -32,10 +32,10 @@ export function Historia() {
                 </div>
                 <div className="text-right">
                   <div className="text-xl sm:text-2xl font-display font-bold text-white">
-                    05:30 — 22:00
+                    TREINO SÉRIO
                   </div>
                   <div className="text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-zinc-400">
-                    Segunda a Sexta
+                    Constância & Força
                   </div>
                 </div>
               </div>

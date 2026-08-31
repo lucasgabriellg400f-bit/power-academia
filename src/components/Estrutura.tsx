@@ -1,15 +1,36 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
-import { Check, Maximize2, Shield } from "lucide-react";
+import { Check, Maximize2, Shield, X } from "lucide-react";
 
 export function Estrutura() {
   const categories = siteConfig.structureCategories;
   const amenities = siteConfig.structureAmenities;
   const [activeCategory, setActiveCategory] = useState(categories[0]);
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  // Keyboard accessibility and body lock for fullscreen modal
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsFullscreen(false);
+      }
+    };
+
+    if (isFullscreen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKeyDown);
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isFullscreen]);
 
   return (
     <section id="estrutura" className="relative py-12 sm:py-16 lg:py-24 bg-[#080808] border-b border-zinc-900 overflow-hidden scroll-mt-20">
@@ -129,15 +150,15 @@ export function Estrutura() {
           </div>
         </div>
 
-        {/* Confirmed Amenities Pill Grid */}
-        <div className="p-4 sm:p-5 bg-zinc-950 border border-zinc-850">
+        {/* Confirmed Amenities Pill Grid (3x3 perfectly balanced grid across 9 items) */}
+        <div className="p-4 sm:p-5 bg-zinc-950 border border-zinc-800">
           <div className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-2.5">
             COMODIDADES & ESTRUTURA CONFIRMADA:
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 text-xs text-zinc-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs text-zinc-300">
             {amenities.map((amenity, idx) => (
-              <div key={idx} className="flex items-center gap-1.5 p-2 bg-zinc-900/60 border border-zinc-800/80">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#84ff00]" />
+              <div key={idx} className="flex items-center gap-1.5 p-2.5 bg-zinc-900/60 border border-zinc-800/80">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#84ff00] shrink-0" />
                 <span className="text-[11px] font-medium">{amenity}</span>
               </div>
             ))}
@@ -145,13 +166,28 @@ export function Estrutura() {
         </div>
       </div>
 
-      {/* Fullscreen Photo Modal */}
+      {/* Fullscreen Photo Modal with Accessible Controls */}
       {isFullscreen && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Visualizador de foto da estrutura"
           onClick={() => setIsFullscreen(false)}
-          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg flex items-center justify-center p-4 sm:p-8 cursor-pointer"
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg flex items-center justify-center p-4 sm:p-8 cursor-pointer animate-in fade-in duration-200"
         >
-          <div className="relative max-w-5xl w-full aspect-[16/10] overflow-hidden border border-zinc-700">
+          {/* Visible Close Button */}
+          <button
+            onClick={() => setIsFullscreen(false)}
+            aria-label="Fechar visualizador de foto"
+            className="absolute top-4 right-4 z-10 p-2.5 bg-black/80 hover:bg-black text-white hover:text-[#84ff00] border border-zinc-700 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer"
+          >
+            <X className="w-5 h-5" />
+          </button>
+
+          <div
+            className="relative max-w-5xl w-full aspect-[16/10] overflow-hidden border border-zinc-700 cursor-default"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Image
               src={activeCategory.image}
               alt={activeCategory.name}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Manifesto } from "@/components/Manifesto";
@@ -16,13 +16,8 @@ import { Localizacao } from "@/components/Localizacao";
 import { CtaFinal } from "@/components/CtaFinal";
 import { Footer } from "@/components/Footer";
 import { MobileStickyCta } from "@/components/MobileStickyCta";
-import { TrialModal } from "@/components/modals/TrialModal";
 
 export default function Home() {
-  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
-
-  const closeTrialModal = () => setIsTrialModalOpen(false);
-
   return (
     <main className="min-h-screen bg-[#080808] text-white selection:bg-[#84ff00] selection:text-black">
       {/* Fixed Navbar */}
@@ -69,9 +64,6 @@ export default function Home() {
 
       {/* 14. Mobile Sticky CTA Bar */}
       <MobileStickyCta />
-
-      {/* Interactive Booking Modal */}
-      <TrialModal isOpen={isTrialModalOpen} onClose={closeTrialModal} />
     </main>
   );
 }
