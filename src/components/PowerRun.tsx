@@ -53,19 +53,19 @@ export function PowerRun() {
       <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-[#84ff00]/5 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[450px] h-[450px] bg-amber-500/5 rounded-full blur-[130px] pointer-events-none" />
 
-      {/* Athlete Layer in Background (Right side, dark atmospheric smoke) */}
+      {/* Athlete Layer in Background (Right side, dark atmospheric smoke & rim light) */}
       <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[65%] select-none pointer-events-none overflow-hidden z-0">
         <Image
           src="/images/power-run/power-run-athlete.jpg"
           alt="Atleta corredora com camiseta oficial Power Run"
           fill
-          className="object-cover object-[70%_20%] lg:object-[80%_center] filter brightness-[0.42] contrast-125 saturate-110"
+          className="object-cover object-[75%_20%] lg:object-[84%_center] filter brightness-[0.75] contrast-115 saturate-105"
           sizes="(max-width: 1024px) 100vw, 65vw"
           priority={false}
         />
         {/* Seamless Vignette Fades to match Reference 05 */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/95 to-transparent lg:via-[#050505]/75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/85 to-transparent lg:via-[#050505]/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/75" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505]" />
       </div>
 
@@ -73,7 +73,7 @@ export function PowerRun() {
         {/* ========================================================= */}
         {/* TOP HERO GRID: Editorial Info (Left) + 2.5D Medal (Right)  */}
         {/* ========================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-2 items-center">
           
           {/* 1. LEFT COLUMN: Editorial Hierarchy */}
           <div className="lg:col-span-6 xl:col-span-5 flex flex-col items-start text-left z-20">
@@ -103,7 +103,7 @@ export function PowerRun() {
             </p>
 
             {/* Premium Date & Location Card */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3.5 sm:p-4 bg-black/75 border border-zinc-800/90 backdrop-blur-md w-full max-w-md mb-6 sm:mb-7">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3.5 sm:p-4 bg-black/80 border border-zinc-800/90 backdrop-blur-md w-full max-w-md mb-6 sm:mb-7">
               {/* Date */}
               <div className="flex items-start gap-3">
                 <div className="p-2 bg-[#84ff00]/10 border border-[#84ff00]/30 text-[#84ff00] shrink-0 mt-0.5 rounded-[4px]">
@@ -127,11 +127,11 @@ export function PowerRun() {
                 <div className="p-2 bg-[#84ff00]/10 border border-[#84ff00]/30 text-[#84ff00] shrink-0 mt-0.5 rounded-[4px]">
                   <MapPin className="w-4 h-4" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <span className="block text-zinc-400 font-mono text-[10px] uppercase tracking-wider">
                     LOCAL
                   </span>
-                  <span className="block text-white font-display font-bold text-xs sm:text-sm uppercase tracking-wide text-zinc-100">
+                  <span className="block text-white font-display font-bold text-xs sm:text-sm uppercase tracking-wide text-zinc-100 whitespace-nowrap">
                     SÃO FÉLIX DO XINGU — PA
                   </span>
                   <span className="text-zinc-400 font-mono text-[10px] uppercase">
@@ -161,7 +161,7 @@ export function PowerRun() {
             <div className="absolute w-[320px] sm:w-[420px] lg:w-[500px] aspect-square rounded-full bg-gradient-to-tr from-[#84ff00]/15 via-amber-500/15 to-transparent blur-[110px] pointer-events-none" />
 
             {/* 2.5D Medal Canvas with suspended ribbon hanging from top */}
-            <div className="perspective-1000 relative flex items-center justify-center w-full max-w-[340px] sm:max-w-[460px] lg:max-w-[540px] xl:max-w-[580px]">
+            <div className="perspective-1000 relative flex items-center justify-center w-full max-w-[350px] sm:max-w-[480px] lg:max-w-[560px] xl:max-w-[600px]">
               <motion.div
                 style={{
                   rotateX,
