@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from "framer-motion";
 import { siteConfig, createWhatsAppUrl } from "@/config/site";
-import { Calendar, MapPin, Zap, Route, Award, Shirt, Trophy } from "lucide-react";
+import { Calendar, MapPin, ArrowUpRight, Zap, Route, Award, Shirt, Trophy } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export function PowerRun() {
@@ -141,16 +141,26 @@ export function PowerRun() {
               </div>
             </div>
 
-            {/* Actions: Discreet WhatsApp link */}
-            <div className="flex items-center gap-3.5">
+            {/* Actions: Primary CTA + WhatsApp secondary */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto">
               <a
                 href={createWhatsAppUrl(siteConfig.whatsappMessages.powerRun)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase text-zinc-300 hover:text-[#84ff00] transition-colors py-2 group"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-[#84ff00] hover:bg-[#98ff1a] active:scale-[0.98] text-black font-display font-black text-xs uppercase tracking-wider transition-all shadow-[0_0_25px_rgba(132,255,0,0.35)] min-h-[46px] group"
               >
-                <WhatsAppIcon className="w-4 h-4 text-[#84ff00]" />
-                <span>FALE COM A POWER NO WHATSAPP &gt;</span>
+                <span>CONHECER A POWER RUN</span>
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+
+              <a
+                href={createWhatsAppUrl(siteConfig.whatsappMessages.powerRun)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center sm:justify-start gap-2 text-xs font-mono text-zinc-400 hover:text-[#84ff00] transition-colors py-2 px-1 group"
+              >
+                <WhatsAppIcon className="w-3.5 h-3.5 text-[#84ff00]" />
+                <span>Fale com a gente no WhatsApp &gt;</span>
               </a>
             </div>
           </div>
