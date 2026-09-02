@@ -78,8 +78,24 @@ function InfoBlock() {
   );
 }
 
-/** The approved master medal asset as a self-contained 2.5D hero graphic (own hover tilt + float). */
-function MedalHero({ className = "", priority = false }: { className?: string; priority?: boolean }) {
+const FINAL_MEDAL_SRC = "/images/power-run/medal-power-run-final.png";
+// Native size of medal-power-run-final.png — the strap is much longer than the
+// retired assets, so the hero graphic is sized off the asset's own portrait
+// aspect ratio rather than assumed to be square.
+const FINAL_MEDAL_ASPECT = "aspect-[1086/1448]";
+
+/** The approved medal asset as a self-contained 2.5D hero graphic (own hover tilt + float). */
+function MedalHero({
+  className = "",
+  priority = false,
+  src = FINAL_MEDAL_SRC,
+  aspectClassName = FINAL_MEDAL_ASPECT,
+}: {
+  className?: string;
+  priority?: boolean;
+  src?: string;
+  aspectClassName?: string;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
 
@@ -119,14 +135,13 @@ function MedalHero({ className = "", priority = false }: { className?: string; p
         transition={
           prefersReducedMotion ? {} : { repeat: Infinity, duration: 5.5, ease: "easeInOut" }
         }
-        className="relative w-full aspect-square select-none"
+        className={`relative w-full ${aspectClassName} select-none`}
       >
-        {/* object-contain shows the complete master asset, ribbon included —
-            never additionally cropped. Any crop of the ribbon visible here is
-            already baked into the approved master file itself. */}
+        {/* object-contain shows the complete asset, ribbon included — never
+            additionally cropped. */}
         <div className="absolute inset-0 filter drop-shadow-[0_35px_55px_rgba(0,0,0,0.9)] drop-shadow-[0_0_45px_rgba(132,255,0,0.16)]">
           <Image
-            src="/images/power-run/medal-power-run-master.png"
+            src={src}
             alt="Medalha Oficial Power Run 2026 - 5Km Corrida do Trabalhador"
             fill
             className="object-contain"
@@ -170,20 +185,20 @@ export function PowerRun() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-transparent w-1/3" />
           </div>
 
-          {/* Ambient corona behind the medal — gives the ribbon a soft atmospheric
-              backdrop instead of sitting abruptly on the raw photo (mirrors the
-              desktop treatment) */}
-          <div className="absolute left-[15%] top-[2%] w-[240px] xs:w-[270px] sm:w-[320px] aspect-square rounded-full bg-gradient-to-tr from-[#84ff00]/20 via-amber-500/15 to-transparent blur-[50px] pointer-events-none" />
-
-          {/* Medal anchored in the seam between the dark left field and the
-              athlete's mass on the right — not centered — breaking out of the
-              photo band's bottom edge as the transition into the copy below. */}
-          <div className="absolute left-[38%] -translate-x-1/2 bottom-[-56px] xs:bottom-[-66px] sm:bottom-[-80px] w-[235px] xs:w-[265px] sm:w-[315px] z-10">
+          {/* Medal anchored in the seam between the dark field on the left and
+              the athlete's mass on the right (~60% over the dark field, ~40%
+              invading the photo — located by sampling the photo's own
+              luminance, not guessed), breaking out of the photo band's bottom
+              edge as the transition into the copy below. Width is unchanged
+              from the previous approved asset (the gold body occupies almost
+              the same fraction of this asset's width), height follows the
+              asset's own taller aspect ratio to fit the complete strap. */}
+          <div className="absolute left-[32%] -translate-x-1/2 bottom-[-56px] xs:bottom-[-66px] sm:bottom-[-80px] w-[236px] xs:w-[266px] sm:w-[316px] z-10">
             <MedalHero priority />
           </div>
         </div>
 
-        <div className="relative z-10 px-4 sm:px-6 pt-16 xs:pt-20 sm:pt-24">
+        <div className="relative z-10 px-4 sm:px-6 pt-16 xs:pt-20 sm:pt-20">
           <InfoBlock />
         </div>
       </div>
@@ -212,7 +227,7 @@ export function PowerRun() {
         <div className="absolute top-[6%] right-[20%] w-[620px] h-[620px] bg-gradient-to-tr from-[#84ff00]/12 via-amber-500/12 to-transparent blur-[130px] pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-6 xl:px-8">
-          <div className="relative min-h-[720px] xl:min-h-[780px] py-16 xl:py-20">
+          <div className="relative min-h-[860px] xl:min-h-[940px] py-16 xl:py-20">
             {/* Text mass — sits in front (z-30), overlapping the athlete
                 layer's left reach; the photo's own dark side keeps it legible. */}
             <div className="relative z-30 max-w-[400px] xl:max-w-[460px]">
@@ -221,8 +236,9 @@ export function PowerRun() {
 
             {/* Medal — the dominant hero object, fused across the text/photo
                 seam, huge and unconfined, fully contained (no clipping) so the
-                ribbon reads as intentional, not an accidental crop. */}
-            <div className="absolute z-20 top-[3%] right-0 w-[54%] xl:w-[58%]">
+                ribbon reads as intentional, not an accidental crop. Sized off
+                the asset's own portrait ratio (see FINAL_MEDAL_ASPECT). */}
+            <div className="absolute z-20 top-[2%] right-0 w-[50%] xl:w-[55%]">
               <MedalHero priority />
             </div>
           </div>
