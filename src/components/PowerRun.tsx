@@ -170,8 +170,15 @@ export function PowerRun() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-transparent w-1/3" />
           </div>
 
-          {/* Medal breaks out of the photo band, unclipped, full ribbon shown */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-[-56px] xs:bottom-[-66px] sm:bottom-[-80px] w-[200px] xs:w-[230px] sm:w-[280px] z-10">
+          {/* Ambient corona behind the medal — gives the ribbon a soft atmospheric
+              backdrop instead of sitting abruptly on the raw photo (mirrors the
+              desktop treatment) */}
+          <div className="absolute left-[15%] top-[2%] w-[240px] xs:w-[270px] sm:w-[320px] aspect-square rounded-full bg-gradient-to-tr from-[#84ff00]/20 via-amber-500/15 to-transparent blur-[50px] pointer-events-none" />
+
+          {/* Medal anchored in the seam between the dark left field and the
+              athlete's mass on the right — not centered — breaking out of the
+              photo band's bottom edge as the transition into the copy below. */}
+          <div className="absolute left-[38%] -translate-x-1/2 bottom-[-56px] xs:bottom-[-66px] sm:bottom-[-80px] w-[235px] xs:w-[265px] sm:w-[315px] z-10">
             <MedalHero priority />
           </div>
         </div>
